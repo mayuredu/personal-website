@@ -1,0 +1,246 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --section-alt: #f1f5f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header / Hero */
+.hero {
+  padding: 100px 0 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.summary {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 0 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+/* Section Styling */
+.section {
+  padding: 60px 0;
+  background: var(--card-bg);
+}
+
+.section.light-bg {
+  background: var(--section-alt);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section h2 i {
+  background: var(--primary);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Card Layout */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+}
+
+.job h3 {
+  margin-bottom: 6px;
+  color: var(--primary-dark);
+}
+
+.company {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.tech {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.skill-category h4 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.skill-category p {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Awards */
+.awards li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* Contact */
+#contact .contact-info {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 2.2;
+  font-size: 1.1rem;
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#contact i {
+  color: var(--primary);
+  width: 30px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: var(--primary-dark);
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 50px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .tagline {
+    font-size: 1.1rem;
+  }
+  .btn {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+  .cta {
+    margin-bottom: 20px;
+  }
+}
+
+/* Optional: Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
